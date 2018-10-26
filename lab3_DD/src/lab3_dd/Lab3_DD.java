@@ -55,11 +55,11 @@ public class Lab3_DD {
                         }
                         System.out.println("seleccione el numero de ejercito: ");
                         int resp3 = sc.nextInt();
-                        while (resp3 > lista_ejercitos.size() || resp3 < 0) {
+                        while (resp3 >= lista_ejercitos.size() || resp3 < 0) {
                             System.out.println("posicion no valida seleccione otra");
                             resp3 = sc.nextInt();
                         }
-                        while (resp != 0) {
+                        while (resp2 != 0) {
                             System.out.println("0-salir\n"
                                     + "1- crear general\n"
                                     + "2- crear caballero\n"
@@ -173,6 +173,7 @@ public class Lab3_DD {
                                     soldado ejecutador = new ejecutor(nombree, lugare, edade);
                                     break;
                                 default:
+                                    System.out.println("se mamo :v");
 
                             }
                         }
