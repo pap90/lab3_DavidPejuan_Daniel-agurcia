@@ -19,31 +19,81 @@ public class Lab3_DD {
             resp = sc.nextInt();
             switch (resp) {
                 case 1:
-                    System.out.println("Ingrese el nombre del ejercito: ");
-                    String nombreE = sc.next();
-                    System.out.println("Ingrese la region: ");
-                    String region = sc.next();
-                    System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
-                    String dinero = sc.next();
-                    boolean vali1 = true;
-                    for (int i = 0; i < dinero.length() - 1; i++) {
-                        if (Character.isLetter(dinero.charAt(i))) {
-                            vali1 = false;
+                    int respe = -1;
+                    while (respe != 0) {
+                        System.out.println("0- salir\n"
+                                + "1- crear\n"
+                                + "2- modificar\n"
+                                + "3-eliminar\n"
+                                + "4-listar");
+                        respe = sc.nextInt();
+                        switch (respe) {
+                            case 1:
+                                System.out.println("Ingrese el nombre del ejercito: ");
+                                String nombreE = sc.next();
+                                System.out.println("Ingrese la region: ");
+                                String region = sc.next();
+                                System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
+                                String dinero = sc.next();
+                                boolean vali1 = true;
+                                for (int i = 0; i < dinero.length() - 1; i++) {
+                                    if (Character.isLetter(dinero.charAt(i))) {
+                                        vali1 = false;
+                                    }
+                                }
+                                while (vali1 == false) {
+                                    System.out.println("Ingreso una letra y no se valido");
+                                    System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
+                                    dinero = sc.next();
+                                    vali1 = true;
+                                    for (int i = 0; i < dinero.length(); i++) {
+                                        if (Character.isLetter(dinero.charAt(i))) {
+                                            vali1 = false;
+                                        }
+                                    }
+                                }
+                                int dinero2 = Integer.parseInt(dinero);
+                                lista_ejercitos.add(new Ejercito(nombreE, region, dinero2));
+                                break;
+                            case 2:
+                                System.out.println("Ingresar el ejercito que desea modificar: ");
+                                for (int i = 0; i < lista_ejercitos.size(); i++) {
+                                    System.out.println("ejercito "+i+lista_ejercitos.get(i));
+                                }
+                                int respm=sc.nextInt();
+                                System.out.println("1-modificar el nombre\n"
+                                        + "2-modificar la region\n"
+                                        + "3- modificar el dinero");
+                                int modificrejercito=sc.nextInt();
+                                switch (modificrejercito) {
+                                    case 1:
+                                        System.out.println("Ingrese el nuevo nombre ");
+                                        String nuevnom=sc.next();
+                                        lista_ejercitos.get(respm).setNombre(nuevnom);
+                                        break;
+                                    case 2:
+                                        System.out.println("Ingrese la nueva region");
+                                        String nuevreg=sc.next();
+                                        lista_ejercitos.get(respm).setRegion(nuevreg);
+                                        break;
+                                    case 3:
+                                        System.out.println("Ingrese la nueva cantidad de dinero: ");
+                                        int nuevdin=sc.nextInt();
+                                        lista_ejercitos.get(respm).setDinero(nuevdin);
+                                        break;
+                                    default:
+                                        
+                                }
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break;
+                            default:
+                                
                         }
                     }
-                    while (vali1 == false) {
-                        System.out.println("Ingreso una letra y no se valido");
-                        System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
-                        dinero = sc.next();
-                        vali1 = true;
-                        for (int i = 0; i < dinero.length(); i++) {
-                            if (Character.isLetter(dinero.charAt(i))) {
-                                vali1 = false;
-                            }
-                        }
-                    }
-                    int dinero2 = Integer.parseInt(dinero);
-                    lista_ejercitos.add(new Ejercito(nombreE, region, dinero2));
+
                     break;
                 case 2:
                     if (lista_ejercitos.size() == 0) {
