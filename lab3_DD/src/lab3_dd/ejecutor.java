@@ -24,8 +24,6 @@ public class ejecutor extends soldado {
         super(nombre, lugar, edad);
     }
 
-    
-
     public Bomba getBomba() {
         return bomba;
     }
@@ -36,7 +34,10 @@ public class ejecutor extends soldado {
 
     @Override
     public String toString() {
-        return "ejecutor{" + "bomba=" + bomba + '}';
+        return "Nombre del General: " + super.getNombre() + "\n"
+                + "Lugar: " + super.getLugar() + "\n"
+                + "Edad: " + super.getEdad() + "\n"
+                + "Puntos de salud: " + super.getSalud() + "\n";
     }
 
 }

@@ -25,9 +25,6 @@ public class general extends soldado {
         this.años = años;
     }
 
-    
-    
-
     public int getAños() {
         return años;
     }
@@ -38,7 +35,10 @@ public class general extends soldado {
 
     @Override
     public String toString() {
-        return "general{" + "a\u00f1os=" + años + '}';
+        return "Nombre del General: " + super.getNombre() + "\n"
+                + "anios al mando: " + años + "\n" + 
+                "Lugar: " + super.getLugar() + "\n" + 
+                "Edad: " + super.getEdad() + "\n" + 
+                "Puntos de salud: " + super.getSalud() + "\n";
     }
-    
 }

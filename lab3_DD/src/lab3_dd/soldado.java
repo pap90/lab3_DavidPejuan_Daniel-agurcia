@@ -65,11 +65,5 @@ public class soldado {
     public void setArma(Arma arma) {
         this.arma = arma;
     }
-
-    @Override
-    public String toString() {
-        return "soldado{" + "nombre=" + nombre + ", lugar=" + lugar + ", edad=" + edad + ", salud=" + salud + ", arma=" + arma + '}';
-    }
-    
     
 }

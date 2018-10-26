@@ -70,7 +70,15 @@ public class Ejercito {
 
     @Override
     public String toString() {
-        return "Ejercito{" + "nombre=" + nombre + ", region=" + region + ", victorias=" + victorias + ", dinero=" + dinero + ", Lista_Soldados=" + Lista_Soldados + '}';
+        String soldados = "";
+        for (soldado soldado : Lista_Soldados) {
+            if (soldado instanceof general) {
+                soldados += soldado.toString();
+            } else {
+                soldados += soldado.toString() + "\n";
+            }
+        }
+        return "Ejercito " + nombre + "\n" + "Region: " + region + "\n" + "Numeros de Victorias: " + victorias + "\n" + "Presupuesto: " + dinero + "\n" + "Soldados:\n" + soldados;
     }
 
 }
