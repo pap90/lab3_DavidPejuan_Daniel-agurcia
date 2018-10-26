@@ -58,39 +58,50 @@ public class Lab3_DD {
                             case 2:
                                 System.out.println("Ingresar el ejercito que desea modificar: ");
                                 for (int i = 0; i < lista_ejercitos.size(); i++) {
-                                    System.out.println("ejercito "+i+lista_ejercitos.get(i));
+                                    System.out.println("ejercito " + i + lista_ejercitos.get(i));
                                 }
-                                int respm=sc.nextInt();
+                                int respm = sc.nextInt();
                                 System.out.println("1-modificar el nombre\n"
                                         + "2-modificar la region\n"
                                         + "3- modificar el dinero");
-                                int modificrejercito=sc.nextInt();
+                                int modificrejercito = sc.nextInt();
                                 switch (modificrejercito) {
                                     case 1:
                                         System.out.println("Ingrese el nuevo nombre ");
-                                        String nuevnom=sc.next();
+                                        String nuevnom = sc.next();
                                         lista_ejercitos.get(respm).setNombre(nuevnom);
                                         break;
                                     case 2:
                                         System.out.println("Ingrese la nueva region");
-                                        String nuevreg=sc.next();
+                                        String nuevreg = sc.next();
                                         lista_ejercitos.get(respm).setRegion(nuevreg);
                                         break;
                                     case 3:
                                         System.out.println("Ingrese la nueva cantidad de dinero: ");
-                                        int nuevdin=sc.nextInt();
+                                        int nuevdin = sc.nextInt();
                                         lista_ejercitos.get(respm).setDinero(nuevdin);
                                         break;
                                     default:
-                                        
+
                                 }
                                 break;
                             case 3:
+                                for (int i = 0; i < lista_ejercitos.size(); i++) {
+                                    System.out.println("Ejercito numero " + i + " " + lista_ejercitos.get(i));
+                                }
+                                System.out.println("Ingrese el numero del ejercito que quiere eliminar: ");
+                                int posicion = sc.nextInt();
+                                lista_ejercitos.remove(posicion);
                                 break;
                             case 4:
+                                String salida = "";
+                                for (Ejercito temp : lista_ejercitos) {
+                                    salida += temp.toString();
+                                }
+                                System.out.println(salida);
                                 break;
                             default:
-                                
+
                         }
                     }
 
