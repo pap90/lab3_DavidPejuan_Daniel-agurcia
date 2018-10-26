@@ -13,11 +13,10 @@ public class Ejercito {
     public Ejercito() {
     }
 
-    public Ejercito(String nombre, String region, int victorias, int dinero) {
+    public Ejercito(String nombre, String region) {
         this.nombre = nombre;
         this.region = region;
-        this.victorias = victorias;
-        this.dinero = dinero;
+        this.victorias = 0;
     }
 
     public String getNombre() {
