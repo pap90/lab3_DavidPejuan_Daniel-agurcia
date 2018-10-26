@@ -14,12 +14,36 @@ public class Lab3_DD {
             System.out.println("1- crear ejercitos\n"
                     + "2- crear soldado\n"
                     + "3- crear arma\n"
-                    + "4- hacer guerra\n"
+                    + "4- hacer guerra!!!!!\n"
                     + "5- salir");
             resp = sc.nextInt();
             switch (resp) {
                 case 1:
-
+                    System.out.println("Ingrese el nombre del ejercito: ");
+                    String nombreE = sc.next();
+                    System.out.println("Ingrese la region: ");
+                    String region = sc.next();
+                    System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
+                    String dinero = sc.next();
+                    boolean vali1 = true;
+                    for (int i = 0; i < dinero.length() - 1; i++) {
+                        if (Character.isLetter(dinero.charAt(i))) {
+                            vali1 = false;
+                        }
+                    }
+                    while (vali1 == false) {
+                        System.out.println("Ingreso una letra y no se valido");
+                        System.out.println("Ingrese el presupuesto que tiene su ejercito: ");
+                        dinero = sc.next();
+                        vali1 = true;
+                        for (int i = 0; i < dinero.length(); i++) {
+                            if (Character.isLetter(dinero.charAt(i))) {
+                                vali1 = false;
+                            }
+                        }
+                    }
+                    int dinero2 = Integer.parseInt(dinero);
+                    lista_ejercitos.add(new Ejercito(nombreE, region, dinero2));
                     break;
                 case 2:
                     if (lista_ejercitos.size() == 0) {
@@ -146,7 +170,7 @@ public class Lab3_DD {
                                         edadee = sc.next();
                                     }
                                     int edade = Integer.parseInt(edadee);
-                                    soldado ejecutador=new ejecutor( nombree, lugare, edade);
+                                    soldado ejecutador = new ejecutor(nombree, lugare, edade);
                                     break;
                                 default:
 
@@ -155,6 +179,64 @@ public class Lab3_DD {
                     }
                     break;
                 case 3:
+                    System.out.println("Ingrese el nombre del arma: ");
+                    String nombreA = sc.next();
+                    System.out.println("Ingrese el alcance del arma: ");
+                    String alcance = sc.next();
+                    boolean vali2 = true;
+                    for (int i = 0; i < alcance.length() - 1; i++) {
+                        if (Character.isLetter(alcance.charAt(i))) {
+                            vali2 = false;
+                        }
+                    }
+                    while (vali2 == false) {
+                        System.out.println("Ingreso una letra y no se valido");
+                        System.out.println("Ingrese el alcance del arma: ");
+                        alcance = sc.next();
+                        vali2 = true;
+                        for (int i = 0; i < alcance.length(); i++) {
+                            if (Character.isLetter(alcance.charAt(i))) {
+                                vali2 = false;
+                            }
+                        }
+                    }
+                    int alcance2 = Integer.parseInt(alcance);
+                    System.out.println("Ingrese el precio del arma: ");
+                    String precio = sc.next();
+                    boolean vali3 = true;
+                    for (int i = 0; i < precio.length() - 1; i++) {
+                        if (Character.isLetter(precio.charAt(i))) {
+                            vali3 = false;
+                        }
+                    }
+                    while (vali3 == false) {
+                        System.out.println("Ingreso una letra y no se valido");
+                        System.out.println("Ingrese el precio del arma: ");
+                        precio = sc.next();
+                        vali3 = true;
+                        for (int i = 0; i < precio.length(); i++) {
+                            if (Character.isLetter(precio.charAt(i))) {
+                                vali3 = false;
+                            }
+                        }
+                    }
+                    int precio2 = Integer.parseInt(precio);
+                    System.out.println("Ingrese el tipo de arma:\n1)Bomba\n2)Rifle\n3)Arma Blanca");
+                    int opcion_arma = sc.nextInt();
+                    switch (opcion_arma) {
+                        case 1:
+                            System.out.println("Ingrese el material de la bomba: ");
+                            String material = sc.next();
+                            break;
+                        case 2:
+                            System.out.println("Desea que el rifle sea automatico?[s/n]: ");
+                            char auto = sc.next().charAt(0);
+                            break;
+                        case 3:
+                            System.out.println("Ingrese el material del Arma Blanca: ");
+                            String materialAB = sc.next();
+                            break;
+                    }
                     break;
                 case 4:
                     break;
