@@ -1,11 +1,13 @@
 package lab3_dd;
 
+import java.util.ArrayList;
+
 public class Ejercito {
 
     private String nombre;
     private String region;
     private int victorias;
-    ArrayList<Soldado> Lista_Soldados = new ArrayList();
+    ArrayList<soldado> Lista_Soldados = new ArrayList();
 
     public Ejercito() {
     }
@@ -40,12 +42,11 @@ public class Ejercito {
         this.victorias = victorias;
     }
 
-    public <any> getLista_Soldados() {
+    public ArrayList<soldado> getLista_Soldados() {
         return Lista_Soldados;
     }
 
-    public void setLista_Soldados(<any  
-        > Lista_Soldados) {
+    public void setLista_Soldados(ArrayList<soldado> Lista_Soldados) {
         this.Lista_Soldados = Lista_Soldados;
     }
 
