@@ -14,9 +14,11 @@ public class caballero extends soldado{
     public caballero() {
     }
 
-    public caballero(String nombre, String lugar, int edad, int salud, Arma arma) {
-        super(nombre, lugar, edad, salud, arma);
+    public caballero(String nombre, String lugar, int edad) {
+        super(nombre, lugar, edad);
     }
+    
+    
 
     @Override
     public String toString() {

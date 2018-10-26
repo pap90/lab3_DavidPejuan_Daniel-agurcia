@@ -20,10 +20,11 @@ public class ejecutor extends soldado {
         this.bomba = bomba;
     }
 
-    public ejecutor(Bomba bomba, String nombre, String lugar, int edad, int salud, Arma arma) {
-        super(nombre, lugar, edad, salud, arma);
-        this.bomba = bomba;
+    public ejecutor(String nombre, String lugar, int edad) {
+        super(nombre, lugar, edad);
     }
+
+    
 
     public Bomba getBomba() {
         return bomba;

@@ -19,12 +19,11 @@ public class soldado {
     public soldado() {
     }
 
-    public soldado(String nombre, String lugar, int edad, int salud, Arma arma) {
+    public soldado(String nombre, String lugar, int edad) {
         this.nombre = nombre;
         this.lugar = lugar;
         this.edad = edad;
-        this.salud = salud;
-        this.arma = arma;
+        this.salud = 100;
     }
 
     public String getNombre() {
