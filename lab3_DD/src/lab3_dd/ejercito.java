@@ -9,14 +9,7 @@ package lab3_dd;
  *
  * @author david
  */
-public class Lab3_DD {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-    }
- x
+public class ejercito {
+    
+    
 }
