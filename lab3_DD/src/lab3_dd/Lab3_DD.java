@@ -596,11 +596,16 @@ public class Lab3_DD {
                     }
                     break;
                 case 4:
+                    Object [][] tablero=new Object[10][10];
+                    
                     break;
                 default:
 
             }
         }
+    }
+    public static void leermatriz(){
+        
     }
 
 }
