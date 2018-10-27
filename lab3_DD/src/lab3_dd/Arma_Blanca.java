@@ -24,4 +24,7 @@ public class Arma_Blanca extends Arma {
         this.material = material;
     }
 
+    public String toString() {
+        return "Nombre: " + super.getNombre() + "\n" + "Alcance: " + super.getAlcance() + "\n" + "Precio: " + super.getPrecio() + "\n" + "Material: " + material + "\n";
+    }
 }

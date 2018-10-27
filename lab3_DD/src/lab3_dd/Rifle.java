@@ -24,9 +24,13 @@ public class Rifle extends Arma {
         this.automatico = automatico;
     }
 
-    @Override
     public String toString() {
-        return "Rifle{" + "automatico=" + automatico + '}';
+        String auto;
+        if (automatico == true) {
+            auto = "Si";
+        } else {
+            auto = "No";
+        }
+        return "Nombre: " + super.getNombre() + "\n" + "Alcance: " + super.getAlcance() + "\n" + "Precio: " + super.getPrecio() + "\n" + "Automatica: " + auto + "\n";
     }
-
 }

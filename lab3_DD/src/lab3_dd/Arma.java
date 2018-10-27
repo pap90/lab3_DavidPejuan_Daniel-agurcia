@@ -39,9 +39,5 @@ public class Arma {
         this.precio = precio;
     }
 
-    @Override
-    public String toString() {
-        return "Arma{" + "nombre=" + nombre + ", alcance=" + alcance + ", precio=" + precio + '}';
-    }
 
 }

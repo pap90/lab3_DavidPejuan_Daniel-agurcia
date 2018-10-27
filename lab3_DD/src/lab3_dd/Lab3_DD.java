@@ -327,11 +327,27 @@ public class Lab3_DD {
                                 }
                                 break;
                             case 3:
+                                for (int i = 0; i < lista_ejercitos.size(); i++) {
+                                    System.out.println("ejercito numero: " + i + lista_ejercitos.get(i));
+                                }
+                                System.out.println("Seleccione el ejercito");
+                                seleccion = sc.nextInt();
+                                for (int i = 0; i < lista_ejercitos.get(seleccion).getLista_Soldados().size(); i++) {
+                                    System.out.println("soldado: " + i + lista_ejercitos.get(seleccion).getLista_Soldados().get(i));
+                                }
+                                System.out.println("Seleccione el soldado a eliminar");
+                                seleccions = sc.nextInt();
+                                lista_ejercitos.get(seleccion).getLista_Soldados().remove(seleccions);
                                 break;
                             case 4:
+                                for (int i = 0; i < lista_ejercitos.size(); i++) {
+                                    System.out.println("ejercito numero: " + i + lista_ejercitos.get(i));
+                                }
+                                System.out.println("Seleccione el ejercito");
+                                seleccion = sc.nextInt();
+                                String salida = lista_ejercitos.get(seleccion).toString();
                                 break;
                             default:
-                                throw new AssertionError();
                         }
                     }
                     break;
@@ -555,11 +571,27 @@ public class Lab3_DD {
                                 }
                                 break;
                             case 3:
+                                for (int i = 0; i < lista_armas.size(); i++) {
+                                    System.out.println("Arma numero " + i + " " + lista_armas.get(i));
+                                    System.out.println("Ingrese el numero del arma que quiere eliminar: ");
+                                    int posicion = sc.nextInt();
+                                    lista_armas.remove(posicion);
+                                }
                                 break;
                             case 4:
+                                String salida = "";
+                                for (Arma temp : lista_armas) {
+                                    if (temp instanceof Bomba) {
+                                        salida += temp;
+                                    } else if (temp instanceof Rifle) {
+                                        salida += temp;
+                                    } else {
+                                        salida += temp;
+                                    }
+                                }
+                                System.out.println(salida);
                                 break;
                             default:
-                                throw new AssertionError();
                         }
                     }
                     break;
