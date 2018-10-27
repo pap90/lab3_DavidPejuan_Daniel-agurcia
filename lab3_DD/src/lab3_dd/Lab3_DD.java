@@ -406,126 +406,152 @@ public class Lab3_DD {
                                 break;
                             case 2:
                                 for (int i = 0; i < lista_armas.size(); i++) {
-                                    System.out.println("arma: "+i+lista_armas.get(i));
+                                    System.out.println("arma: " + i + lista_armas.get(i));
                                 }
                                 System.out.println("seleccione el arma: ");
-                                int seleccionarma=sc.nextInt();
+                                int seleccionarma = sc.nextInt();
                                 if (lista_armas.get(seleccionarma) instanceof Bomba) {
                                     System.out.println("1- modificar el nombre\n"
                                             + "2- modificar el alcance\n"
                                             + "3- modificar el precio\n"
                                             + "4- modificar el material");
-                                    int seleccionbomba=sc.nextInt();
+                                    int seleccionbomba = sc.nextInt();
                                     switch (seleccionbomba) {
                                         case 1:
                                             System.out.println("Ingrese el nuevonombre: ");
-                                            String nuevnombrebomba=sc.next();
+                                            String nuevnombrebomba = sc.next();
                                             lista_armas.get(seleccionarma).setNombre(nuevnombrebomba);
                                             break;
                                         case 2:
                                             System.out.println("Ingrese el nuevo alcance: ");
-                                            int nuevoalbomba=sc.nextInt();
+                                            int nuevoalbomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setAlcance(nuevoalbomba);
                                             break;
                                         case 3:
                                             System.out.println("Ingrese el nuevo precio: ");
-                                            int nuevopreciobomba=sc.nextInt();
+                                            int nuevopreciobomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setPrecio(nuevopreciobomba);
                                             break;
                                         case 4:
                                             System.out.println("Ingrese el nuevo material: ");
-                                            String nuevmaterialbomba=sc.next();
-                                            ((Bomba)lista_armas.get(seleccionarma)).setMaterial(nuevmaterialbomba);
+                                            String nuevmaterialbomba = sc.next();
+                                            ((Bomba) lista_armas.get(seleccionarma)).setMaterial(nuevmaterialbomba);
                                             break;
                                         default:
-                                            
+
                                     }
-                                }else if (lista_armas.get(seleccionarma) instanceof Rifle) {
-                                     System.out.println("1- modificar el nombre\n"
+                                } else if (lista_armas.get(seleccionarma) instanceof Rifle) {
+                                    System.out.println("1- modificar el nombre\n"
                                             + "2- modificar el alcance\n"
                                             + "3- modificar el precio\n"
                                             + "4- modificar el automatico");
-                                    int seleccionbomba=sc.nextInt();
+                                    int seleccionbomba = sc.nextInt();
                                     switch (seleccionbomba) {
                                         case 1:
                                             System.out.println("Ingrese el nuevonombre: ");
-                                            String nuevnombrebomba=sc.next();
+                                            String nuevnombrebomba = sc.next();
                                             lista_armas.get(seleccionarma).setNombre(nuevnombrebomba);
                                             break;
                                         case 2:
                                             System.out.println("Ingrese el nuevo alcance: ");
-                                            int nuevoalbomba=sc.nextInt();
+                                            int nuevoalbomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setAlcance(nuevoalbomba);
                                             break;
                                         case 3:
                                             System.out.println("Ingrese el nuevo precio: ");
-                                            int nuevopreciobomba=sc.nextInt();
+                                            int nuevopreciobomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setPrecio(nuevopreciobomba);
                                             break;
                                         case 4:
                                             System.out.println("1-automatico\n"
                                                     + "2- no automatico");
-                                            int automaticosel=sc.nextInt();
+                                            int automaticosel = sc.nextInt();
                                             switch (automaticosel) {
                                                 case 1:
-                                                    ((Rifle)lista_armas.get(seleccionarma)).setAutomatico(true);
+                                                    ((Rifle) lista_armas.get(seleccionarma)).setAutomatico(true);
                                                     break;
                                                 case 2:
-                                                    ((Rifle)lista_armas.get(seleccionarma)).setAutomatico(false);
+                                                    ((Rifle) lista_armas.get(seleccionarma)).setAutomatico(false);
                                                     break;
                                                 default:
-                                                    
+
                                             }
-                                            
-                                            
+
                                             break;
                                         default:
-                                            
+
                                     }
-                                }else if (lista_armas.get(seleccionarma) instanceof Rifle) {
-                                     System.out.println("1- modificar el nombre\n"
+                                } else if (lista_armas.get(seleccionarma) instanceof Rifle) {
+                                    System.out.println("1- modificar el nombre\n"
                                             + "2- modificar el alcance\n"
                                             + "3- modificar el precio\n"
                                             + "4- modificar el automatico");
-                                    int seleccionbomba=sc.nextInt();
+                                    int seleccionbomba = sc.nextInt();
                                     switch (seleccionbomba) {
                                         case 1:
                                             System.out.println("Ingrese el nuevonombre: ");
-                                            String nuevnombrebomba=sc.next();
+                                            String nuevnombrebomba = sc.next();
                                             lista_armas.get(seleccionarma).setNombre(nuevnombrebomba);
                                             break;
                                         case 2:
                                             System.out.println("Ingrese el nuevo alcance: ");
-                                            int nuevoalbomba=sc.nextInt();
+                                            int nuevoalbomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setAlcance(nuevoalbomba);
                                             break;
                                         case 3:
                                             System.out.println("Ingrese el nuevo precio: ");
-                                            int nuevopreciobomba=sc.nextInt();
+                                            int nuevopreciobomba = sc.nextInt();
                                             lista_armas.get(seleccionarma).setPrecio(nuevopreciobomba);
                                             break;
                                         case 4:
                                             System.out.println("1-automatico\n"
                                                     + "2- no automatico");
-                                            int automaticosel=sc.nextInt();
+                                            int automaticosel = sc.nextInt();
                                             switch (automaticosel) {
                                                 case 1:
-                                                    ((Rifle)lista_armas.get(seleccionarma)).setAutomatico(true);
+                                                    ((Rifle) lista_armas.get(seleccionarma)).setAutomatico(true);
                                                     break;
                                                 case 2:
-                                                    ((Rifle)lista_armas.get(seleccionarma)).setAutomatico(false);
+                                                    ((Rifle) lista_armas.get(seleccionarma)).setAutomatico(false);
                                                     break;
                                                 default:
-                                                    
+
                                             }
-                                            
-                                            
+
                                             break;
                                         default:
-                                            
+
                                     }
-                                }else if (lista_armas.get(seleccionarma) instanceof Arma_Blanca) {
-                                    
+                                } else if (lista_armas.get(seleccionarma) instanceof Arma_Blanca) {
+                                    System.out.println("1- modificar el nombre\n"
+                                            + "2- modificar el alcance\n"
+                                            + "3- modificar el precio\n"
+                                            + "4- modificar el material");
+                                    int seleccionbomba = sc.nextInt();
+                                    switch (seleccionbomba) {
+                                        case 1:
+                                            System.out.println("Ingrese el nuevonombre: ");
+                                            String nuevnombrebomba = sc.next();
+                                            lista_armas.get(seleccionarma).setNombre(nuevnombrebomba);
+                                            break;
+                                        case 2:
+                                            System.out.println("Ingrese el nuevo alcance: ");
+                                            int nuevoalbomba = sc.nextInt();
+                                            lista_armas.get(seleccionarma).setAlcance(nuevoalbomba);
+                                            break;
+                                        case 3:
+                                            System.out.println("Ingrese el nuevo precio: ");
+                                            int nuevopreciobomba = sc.nextInt();
+                                            lista_armas.get(seleccionarma).setPrecio(nuevopreciobomba);
+                                            break;
+                                        case 4:
+                                            System.out.println("Ingrese el nuevo material: ");
+                                            String nuevmaterialbomba = sc.next();
+                                            ((Arma_Blanca) lista_armas.get(seleccionarma)).setMaterial(nuevmaterialbomba);
+                                            break;
+                                        default:
+
+                                    }
                                 }
                                 break;
                             case 3:
