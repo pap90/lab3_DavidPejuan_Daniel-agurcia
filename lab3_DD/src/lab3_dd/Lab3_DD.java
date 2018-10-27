@@ -524,7 +524,7 @@ public class Lab3_DD {
                                         default:
                                             
                                     }
-                                }else if (lista_armas.get(seleccionarma) instanceof Ar) {
+                                }else if (lista_armas.get(seleccionarma) instanceof Arma_Blanca) {
                                     
                                 }
                                 break;
